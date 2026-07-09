@@ -32,6 +32,7 @@ const statusLabels = {
   practiced: "実践中",
   boundary: "未掲載",
   pr: "PR参加",
+  localPatch: "ローカル検証",
 };
 
 function getStatusLabel(status) {
@@ -48,27 +49,18 @@ const lobbyRows = [
 const majorRepos = [
   {
     acc: "REPO · 01",
-    type: "INPUT METHOD",
-    title: "karukan",
-    desc:
-      "日本語入力システム。Rustの変換エンジン、CLI、Linux/macOS向けの入力まわりまで触っている制作です。",
-    status: "public",
-    githubUrl: "https://github.com/shieikan/karukan",
-    chips: ["Rust", "IME", "macOS/Linux"],
-    feature: true,
-  },
-  {
-    acc: "REPO · 02",
     type: "PORTFOLIO",
     title: "LP制作",
     desc:
       "このポートフォリオ自体。自己紹介、制作物、制作過程をどう見せるかを作りながら直しています。",
-    status: "localDraft",
+    status: "public",
+    githubUrl: "https://github.com/rasokiwayami/sora-portfolio",
     chips: ["React", "Portfolio", "Design"],
     replay: true,
+    feature: true,
   },
   {
-    acc: "REPO · 03",
+    acc: "REPO · 02",
     type: "PDF TOOL",
     title: "openlongpdf-translator",
     desc:
@@ -78,17 +70,17 @@ const majorRepos = [
     chips: ["PDF", "Translation", "Reading"],
   },
   {
-    acc: "REPO · 04",
-    type: "CHROME EXTENSION",
-    title: "Assignment Manager for YNU LMS",
+    acc: "REPO · 03",
+    type: "WRITING TOOL",
+    title: "proposal-forge",
     desc:
-      "Lumosの制作物に、改善PRとして参加しました。既存のChrome拡張を読み、差分を小さくまとめる経験になりました。",
-    status: "pr",
-    githubUrl: "https://github.com/Lumos-Programming/Assignment-Manager-for-YNU-LMS",
-    chips: ["Pull Request", "Chrome Extension", "YNU"],
+      "提案文の下書きを作る小さなツール。質で主役にするより、デプロイまで試した経験として置いています。",
+    status: "public",
+    githubUrl: "https://github.com/rasokiwayami/proposal-forge",
+    chips: ["Writing", "Deploy", "Small Tool"],
   },
   {
-    acc: "REPO · 05",
+    acc: "REPO · 04",
     type: "WORKFLOW",
     title: "unknowns-workflow",
     desc:
@@ -98,14 +90,23 @@ const majorRepos = [
     chips: ["Workflow", "Review", "Planning"],
   },
   {
-    acc: "REPO · 06",
-    type: "WRITING TOOL",
-    title: "proposal-forge",
+    acc: "REPO · 05",
+    type: "CHROME EXTENSION",
+    title: "Assignment Manager for YNU LMS",
     desc:
-      "提案文の下書きを作る小さなツール。質で主役にするより、デプロイまで試した経験として置いています。",
-    status: "public",
-    githubUrl: "https://github.com/rasokiwayami/proposal-forge",
-    chips: ["Writing", "Deploy", "Small Tool"],
+      "Lumosの制作物に、改善PRとして参加しました。既存のChrome拡張を読み、差分を小さくまとめる経験になりました。",
+    status: "pr",
+    githubUrl: "https://github.com/Lumos-Programming/Assignment-Manager-for-YNU-LMS",
+    chips: ["Pull Request", "Chrome Extension", "YNU"],
+  },
+  {
+    acc: "REPO · 06",
+    type: "INPUT METHOD",
+    title: "karukan",
+    desc:
+      "日本語入力システムの公開repoを読み、手元で入力まわりの修正を試した記録です。主制作としてではなく、RustとIMEまわりを読む練習として置いています。",
+    status: "localPatch",
+    chips: ["Rust", "IME", "Local Patch"],
   },
 ];
 
@@ -281,8 +282,8 @@ const replaySteps = [
     paperTitle: "公開できる範囲",
     paperType: "BOUNDARY",
     body:
-      "karukan、openlongpdf、LP制作は前に出しやすい。Jinsei、YNU-LMS-Agent、CrowdWorks Agent、discord-codex-readerは、短い説明で並べる。",
-    summary: "GitHubに飛ばすものと、短い説明で並べるものを分けた。",
+      "自分のrepoとして前に出せるもの、PR参加として出すもの、ローカル検証に留めるものを分けた。Jinsei、YNU-LMS-Agent、CrowdWorks Agent、discord-codex-readerは、短い説明で並べる。",
+    summary: "前に出すもの、PR参加、ローカル検証、概要だけの制作を分けた。",
     caption: "強い制作でも、出し方を間違えると信頼を削る。",
   },
   {

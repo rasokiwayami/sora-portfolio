@@ -5,6 +5,8 @@ docs/
 scripts/
 output/
 runtime/
+.env*
+.vercel/
 .codex-cc/
 .superpowers/
 .DS_Store

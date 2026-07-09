@@ -1,0 +1,12 @@
+AGENTS.md
+PROJECT_PROFILE.yaml
+content/
+docs/
+scripts/
+output/
+runtime/
+.codex-cc/
+.superpowers/
+.DS_Store
+node_modules/
+dist/

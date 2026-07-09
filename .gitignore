@@ -11,3 +11,4 @@ output/
 runtime/
 .codex-cc/
 .superpowers/
+.vercel/
